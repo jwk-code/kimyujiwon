@@ -150,3 +150,7 @@ function initLang() {
 }
 
 document.addEventListener("DOMContentLoaded", initLang);
+//lightbox prevent rightclick
+lightbox.addEventListener('contextmenu', e => {
+    e.preventDefault();
+});
