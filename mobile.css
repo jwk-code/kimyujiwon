@@ -22,6 +22,10 @@
          overflow: visible;
      }
 
+     .cv {
+         display: none;
+     }
+
      .drawer-wrapper {
          position: static;
      }
