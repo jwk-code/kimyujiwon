@@ -1,0 +1,118 @@
+ /* =========================
+   📱 Mobile breakpoint
+   ========================= */
+
+
+
+
+ @media (max-width: 768px) {
+     .wrap {
+         flex-direction: column;
+         height: auto;
+         /* stop forcing viewport height */
+     }
+
+     .col {
+         flex: none;
+         /* prevent weird height calc */
+         width: 100%;
+     }
+
+     .col-1 {
+         overflow: visible;
+     }
+
+     .drawer-wrapper {
+         position: static;
+     }
+
+     .drawer {
+         position: fixed;
+         top: 0;
+         right: 0;
+
+         width: 80vw;
+         max-width: 360px;
+         height: 100vh;
+
+         background: white;
+         z-index: 2000;
+
+         transform: translateX(100%);
+         /* ⭐ 화면 밖 */
+         transition: transform 0.4s ease;
+
+         border-left: 1px solid #ddd;
+         /*  overflow: hidden;*/
+
+     }
+
+     .drawer.open {
+         transform: translateX(0);
+         /* ⭐ 슬라이드 인 */
+
+     }
+
+     /* handle을 위쪽 탭으로 */
+     .drawer-handle {
+         display: none;
+     }
+
+     .drawer-content {
+         height: 100%;
+         padding: 16px;
+     }
+
+     .drawer-handle:hover {
+         opacity: 1;
+     }
+
+     .drawer-scroll {
+         height: 100%;
+         overflow-y: auto;
+
+         display: flex;
+         flex-direction: column;
+         gap: 12px;
+     }
+
+     .drawer-scroll img {
+         width: 100%;
+         height: auto;
+         object-fit: contain;
+     }
+
+     /*
+     .drawer-toggle-mobile {
+         display: inline-block;
+         margin-bottom: 12px;
+         font-size: 0.8rem;
+         letter-spacing: 0.05em;
+         padding: 6px 10px;
+
+         background: rgba(255, 255, 255, 0.9);
+         border: 1px solid #ddd;
+         color: #222;
+
+         cursor: pointer;
+         opacity: 0.85;
+     }*/
+
+     .drawer-toggle-mobile:hover {
+         opacity: 1;
+     }
+
+
+     .col-2 {
+         overflow: visible;
+         /* use normal page scroll */
+         border-left: none;
+     }
+ }
+
+ /* 데스크탑에서만 숨김 */
+ @media (min-width: 769px) {
+     .row.drawer-trigger {
+         display: none;
+     }
+ }

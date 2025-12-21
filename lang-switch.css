@@ -1,0 +1,30 @@
+.lang-switch {
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    color: #888;
+    margin-bottom: 24px;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.lang-option {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+}
+
+.lang-option:hover {
+    opacity: 1;
+}
+
+.lang-option.active {
+    opacity: 1;
+    color: #222;
+}
+
+.lang-divider {
+    opacity: 0.3;
+    pointer-events: none;
+}
